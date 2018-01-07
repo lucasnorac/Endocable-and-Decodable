@@ -10,15 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBAction func enviarPost(_ sender: UIButton) {
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else {return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        do {
+            
+        }
+        let session = URLSession.shared
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func getUsuarios(_ sender: UIButton) {
+        
     }
+    
+    
 
 
 }
